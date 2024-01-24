@@ -9,7 +9,7 @@ yum install git -y
 yum install java-11-amazon-corretto -y
 # install jenkins
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
-rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 amazon-linux-extras install epel
 yum install jenkins -y
 systemctl daemon-reload
@@ -40,7 +40,7 @@ unzip awscliv2.zip
 # install python 3
 yum install python3 -y
 # install ansible
-pip3 install ansible
+sudo amazon-linux-extras install ansible2 -y
 # install boto3
 pip3 install boto3
 # install terraform
